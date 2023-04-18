@@ -15,6 +15,7 @@ import org.slf4j.LoggerFactory;
 public class Util {
 
 	private static Logger logger = LoggerFactory.getLogger(Util.class);
+	
 
 	public JSONObject readJSONFile(String jsonFileName) {
 
@@ -34,7 +35,7 @@ public class Util {
 
 			}
 
-		} catch (IOException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 
