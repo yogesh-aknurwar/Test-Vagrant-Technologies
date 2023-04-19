@@ -1,7 +1,12 @@
 # Compiled class file
 *.class
 *.test-output
-
+.project
+.settings
+test/test-output/
+target/
+!**/src/main/**/target
+!**/src/test/**/target
 # Log file
 *.log
 
