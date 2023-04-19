@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-04-19T13:17:29Z" name="Default suite" finished-at="2023-04-19T13:17:29Z" duration-ms="43">
+    <groups>
+    </groups>
+    <test started-at="2023-04-19T13:17:29Z" name="Default test" finished-at="2023-04-19T13:17:29Z" duration-ms="43">
+      <class name="com.test.vagrant.tech.tests.ProblemStatement">
+        <test-method signature="verifyForeignPlayersCount()[pri:1, instance:com.test.vagrant.tech.tests.ProblemStatement@66746f57]" started-at="2023-04-19T13:17:29Z" name="verifyForeignPlayersCount" finished-at="2023-04-19T13:17:29Z" duration-ms="13" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyForeignPlayersCount -->
+        <test-method signature="verifyWicketKeepersPresence()[pri:2, instance:com.test.vagrant.tech.tests.ProblemStatement@66746f57]" started-at="2023-04-19T13:17:29Z" name="verifyWicketKeepersPresence" finished-at="2023-04-19T13:17:29Z" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyWicketKeepersPresence -->
+      </class> <!-- com.test.vagrant.tech.tests.ProblemStatement -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

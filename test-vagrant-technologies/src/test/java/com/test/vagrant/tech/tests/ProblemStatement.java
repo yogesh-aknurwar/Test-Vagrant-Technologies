@@ -1,3 +1,9 @@
+
+/**
+ * @author Yogesh Aknurwar
+ * @date 19-04-2022
+ * 
+ */
 package com.test.vagrant.tech.tests;
 
 import java.util.ArrayList;
@@ -16,14 +22,13 @@ import com.test.vagrant.tech.utility.Util;
 
 public class ProblemStatement extends Util {
 
-	private static Logger logger = LoggerFactory.getLogger(ProblemStatement.class);
 	GlobalConstants constant;
 	JSONObject jsonObject = super.readJSONFile(GlobalConstants.DATA);
 	RoyalChallengersBangloreTeam teamDetails = RoyalChallengersBangloreTeam.fromJSON(jsonObject.toJSONString());
 	List<Players> players = teamDetails.getPlayer();
 
 	@Test(priority = 1)
-	public void verifyForeignPlayersCount() throws Exception {
+	public void verifyForeignPlayersCount() {
 
 		List<String> countries = new ArrayList<String>();
 
@@ -40,7 +45,7 @@ public class ProblemStatement extends Util {
 	}
 
 	@Test(priority = 2)
-	public void verifyWicketKeepersPresence() throws Exception {
+	public void verifyWicketKeepersPresence() {
 
 		List<String> roles = new ArrayList<String>();
 

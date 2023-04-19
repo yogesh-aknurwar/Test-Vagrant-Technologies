@@ -1,8 +1,11 @@
+/**
+ * @author Yogesh Aknurwar
+ * @date 19-04-2022
+ * 
+ */
 package com.test.vagrant.tech.utility;
 
 import java.io.BufferedReader;
-import java.io.FileInputStream;
-import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
@@ -15,15 +18,11 @@ import org.slf4j.LoggerFactory;
 public class Util {
 
 	private static Logger logger = LoggerFactory.getLogger(Util.class);
-	
 
 	public JSONObject readJSONFile(String jsonFileName) {
 
 		String jsonFileContent = "";
-		FileInputStream fis = null;
 		String fileName = jsonFileName;
-
-		ClassLoader classloader = getClass().getClassLoader();
 
 		try (InputStream inputStream = ClassLoader.getSystemResourceAsStream(fileName);
 				InputStreamReader streamReader = new InputStreamReader(inputStream, StandardCharsets.UTF_8);
