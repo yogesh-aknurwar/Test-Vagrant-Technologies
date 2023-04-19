@@ -18,15 +18,13 @@ public class ProblemStatement extends Util {
 
 	private static Logger logger = LoggerFactory.getLogger(ProblemStatement.class);
 	GlobalConstants constant;
+	JSONObject jsonObject = super.readJSONFile(GlobalConstants.DATA);
+	RoyalChallengersBangloreTeam teamDetails = RoyalChallengersBangloreTeam.fromJSON(jsonObject.toJSONString());
+	List<Players> players = teamDetails.getPlayer();
 
-	@Test
-	public void verifyForeignPlayersTeamSize() throws Exception {
+	@Test(priority = 1)
+	public void verifyForeignPlayersCount() throws Exception {
 
-		JSONObject jsonObject = super.readJSONFile(GlobalConstants.DATA);
-
-		RoyalChallengersBangloreTeam teamDetails = RoyalChallengersBangloreTeam.fromJSON(jsonObject.toJSONString());
-
-		List<Players> players = teamDetails.getPlayer();
 		List<String> countries = new ArrayList<String>();
 
 		for (Players player : players) {
@@ -38,6 +36,21 @@ public class ProblemStatement extends Util {
 
 		Assert.assertEquals(countries.size(), GlobalConstants.FOREIGN_PLAYERS_COUNT,
 				"Team does not have " + GlobalConstants.FOREIGN_PLAYERS_COUNT + " foreign players");
+
+	}
+
+	@Test(priority = 2)
+	public void verifyWicketKeepersPresence() throws Exception {
+
+		List<String> roles = new ArrayList<String>();
+
+		for (Players player : players) {
+			roles.add(player.getRole());
+		}
+
+		System.out.println("Roles of the players are " + roles);
+		Assert.assertTrue(roles.contains(GlobalConstants.WICKET_KEEPER),
+				"Team does not have " + GlobalConstants.WICKET_KEEPER);
 
 	}
 }

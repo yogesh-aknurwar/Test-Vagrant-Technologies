@@ -5,7 +5,7 @@
     <classes>
       <class name="com.test.vagrant.tech.tests.ProblemStatement">
         <methods>
-          <include name="verifyForeignPlayersTeamSize"/>
+          <include name="verifyWicketKeepersPresence"/>
         </methods>
       </class> <!-- com.test.vagrant.tech.tests.ProblemStatement -->
     </classes>
